@@ -20,10 +20,10 @@ public record VideoViewModel(string FileName)
     {
         get
         {
-            var currentAppDataDirectory = Microsoft.Maui.Storage.FileSystem.Current.AppDataDirectory;
-            var filename = FileName.Split("/").Last();
+            var currentAppDataDirectory = "/storage/emulated/0/Android/data/com.companyname.application";
+            var filename = FileName.Split("/").Last().Split(".").First();
             
-            return WebUtility.UrlDecode(Path.Join(currentAppDataDirectory, "vid", filename));
+            return WebUtility.UrlDecode(Path.Join(currentAppDataDirectory, "vid", filename + ".mp4"));
         }
     }
 }
