@@ -10,6 +10,8 @@
     <views:MediaElement   
         ShouldAutoPlay="True"
         ShouldShowPlaybackControls="False"
-        Source="{Binding FilePath}"/>
+        Source="{Binding FilePath}"
+        ShouldKeepScreenOn="True"
+        MediaFailed="MediaElement_OnMediaFailed"/>
     
 </ContentPage>
