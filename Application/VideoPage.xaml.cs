@@ -25,7 +25,7 @@ public record VideoViewModel(string FileName)
     {
         get
         {
-            var currentAppDataDirectory = "/storage/emulated/0/Android/data/com.companyname.application";
+            var currentAppDataDirectory = "/storage/emulated/0/Android/data/com.pelle.bmo";
             var filename = FileName.Split("/").Last().Split(".").First();
             
             return WebUtility.UrlDecode(Path.Join(currentAppDataDirectory, "vid", filename + ".mp4"));
